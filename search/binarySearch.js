@@ -1,5 +1,12 @@
-// Binary Search is a searching algorithm for finding an element's position in a sorted array.
-
+/**
+ * Recursive implementation of binary search
+ * 
+ * @param {Array} arr 
+ * @param {Number} target 
+ * @param {Number} low 
+ * @param {Number} high 
+ * @returns Number	index of found item or -1
+ */
 function binarySearch(arr, target, low, high){
 
 	if(high >= low){
@@ -15,7 +22,4 @@ function binarySearch(arr, target, low, high){
 
 }
 
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-let target = 4;
-
-console.log(binarySearch(array, target, 0, array.length));
+module.exports = binarySearch;
