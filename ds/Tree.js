@@ -7,9 +7,9 @@ class TreeNode {
 }
 
 class Tree {
-	constructor(arr){
+	constructor(arr = null){
 		this.root = null;
-		this.fromArray(arr);
+		if(arr) this.fromArray(arr);
 	}
 
 	get size(){
