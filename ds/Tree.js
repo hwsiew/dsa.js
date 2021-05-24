@@ -1,5 +1,3 @@
-const { Verifier } = require("sshpk");
-
 class TreeNode {
 	constructor(val, left = null, right = null){
 		this.value = val;
