@@ -31,9 +31,4 @@ class Stack {
 
 }
 
-let s = new Stack();
-s.push(1);
-s.push(2);
-console.log(s.toString());
-s.pop();
-console.log(s.toString());
+module.exports = Stack;
