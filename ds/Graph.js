@@ -3,6 +3,17 @@ class Graph{
 		this.data = new Map(graph);
 	}
 
+	dfsRecursive(start, visited = null){
+		if(!visited) visited = new Set();
+
+		visited.add(start);
+
+		for(let node of this.data.get(start))
+			if(!visited.has(node)) this.dfs2(node,visited);
+
+		return [...visited];
+	}
+
 	dfs(start){
 
 		let visited = [];
