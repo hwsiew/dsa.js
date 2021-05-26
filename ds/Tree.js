@@ -178,6 +178,22 @@ class Tree {
 
 	}
 
+	isSymmetric(){
+
+		const isMirror = function(r1,r2){
+
+			if(!r1 && !r2) return true;
+
+			if(r1 && r2) 
+				if(r1.value == r2.value)
+					return isMirror(r1.left,r2.right) && isMirror(r1.right,r2.left);
+
+			return false;
+		}
+
+		return isMirror(this.root,this.root);
+	}
+
 }
 
 module.exports = {

@@ -81,3 +81,13 @@ it('is not a balanced binary tree', function(){
 
 	expect(tree.isBalanced()).toBe(false);
 });
+
+it('is a symmetric tree',function(){
+	let tree = new Tree([1,2,2,3,4,4,3]);
+	expect(tree.isSymmetric()).toBe(true);
+});
+
+it('is not a symmetric tree',function(){
+	let tree = new Tree([1,2,2,null,3,null,3]);
+	expect(tree.isSymmetric()).toBe(false);
+});
