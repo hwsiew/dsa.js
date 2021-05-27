@@ -91,3 +91,17 @@ it('is not a symmetric tree',function(){
 	let tree = new Tree([1,2,2,null,3,null,3]);
 	expect(tree.isSymmetric()).toBe(false);
 });
+
+it('travel via dfs', function(){
+	let tree = new Tree([1,0,4,3,1]);
+	expect(tree.dfs()).toEqual([
+		[1,0,3],
+		[1,0,1],
+		[1,4]
+	]);
+})
+
+it('travel via bfs', function(){
+	let tree = new Tree([1,0,4,3,1]);
+	expect(tree.bfs()).toEqual([1,0,4,3,1]);
+})

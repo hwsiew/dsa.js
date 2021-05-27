@@ -194,6 +194,46 @@ class Tree {
 		return isMirror(this.root,this.root);
 	}
 
+	dfs(){
+
+		let path = [];
+
+		let travel = function(root,arr){
+
+			if(!root.left && !root.right){
+				path.push([...arr,root.value]);
+				return;
+			}
+
+			if(root.left) travel(root.left,[...arr, root.value]);
+			if(root.right) travel(root.right, [...arr, root.value]);
+
+		}
+
+		travel(this.root,[]);
+
+		return path;
+
+	}
+
+	bfs(){
+
+		let path = [];
+		let queue = [this.root];
+
+		while(queue.length){
+
+			let node = queue.shift();
+			path.push(node.value);
+
+			if(node.left) queue.push(node.left);
+			if(node.right) queue.push(node.right);
+
+		}
+		
+		return path;
+	}
+
 }
 
 module.exports = {
