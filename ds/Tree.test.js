@@ -105,3 +105,15 @@ it('travel via bfs', function(){
 	let tree = new Tree([1,0,4,3,1]);
 	expect(tree.bfs()).toEqual([1,0,4,3,1]);
 })
+
+it('is a subtree',function(){
+	let tree = new Tree([5,10,7,4,6,null,null,1,2,null,-1]);
+	let t2 = new Tree([10,4,6,1,2,null,-1]);
+	expect(tree.isSubtree(t2)).toBe(true);
+});
+
+it('is not a subtree',function(){
+	let tree = new Tree([5,10,7,4,6,null,null,1,2,-1]);
+	let t2 = new Tree([10,4,6,1,2,null,-1]);
+	expect(tree.isSubtree(t2)).toBe(false);
+});

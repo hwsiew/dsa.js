@@ -194,6 +194,24 @@ class Tree {
 		return isMirror(this.root,this.root);
 	}
 
+	isSubtree(t){
+
+		if(!t) return true;
+
+		let verify = function(t1,t2){
+
+			if(!t1 && !t2) return true;
+			if(!t1 || !t2) return false;
+
+			if(t1.value == t2.value) return verify(t1.left,t2.left) && verify(t1.right,t2.right);
+			else return verify(t1.left,t2) || verify(t1.right,t2);
+
+		};
+
+		return verify(this.root,t.root)
+
+	}
+
 	dfs(){
 
 		let path = [];
