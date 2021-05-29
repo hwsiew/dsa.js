@@ -8,6 +8,7 @@ Supported data structures:
 * Heap
 * BinarySearchTree
 * Stack
+* LinkedList
 * more to come...
 
 Supported algorithms:
