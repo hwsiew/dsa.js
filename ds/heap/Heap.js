@@ -1,19 +1,35 @@
+/** Class representing a Heap data structure */
 class Heap{
+	/**
+	 * Create a heap data structure
+	 * @param {boolean} max 
+	 */
 	constructor(max = true){
 		this.data = [];
 		this.max = max; // is maximum heap
 	}
 
+	/**
+	 * Get the size of the heap
+	 * @returns {number} size of the heap
+	 */
 	get size(){
 		return this.data.length;
 	}
 
+	/**
+	 * Get the root node of the heap
+	 * @returns {?number[]}
+	 */
 	get root(){
 		return this.data ? this.data[0] : null;
 	}
 
+	/**
+	 * Insert a node to heap
+	 * @param {number} num 
+	 */
 	insert(num){
-
 		this.data.push(num);
 
 		if(this.size > 1){
@@ -22,10 +38,9 @@ class Heap{
 	}
 
 	/**
-	 * 
-	 * @param {Number} num 
-	 * 
-	 * @returns index | -1
+	 * Find a number in heap
+	 * @param {number} num 
+	 * @returns {?number}
 	 */
 	find(num){
 		let i = 0 ;
@@ -35,11 +50,14 @@ class Heap{
 			i++;
 		}
 
-		return -1;
+		return null;
 	}
 
+	/**
+	 * Delete a number from heap
+	 * @param {number} num  
+	 */
 	delete(num){
-
 		let found = this.find(num);
 
 		if(found == -1) return;
@@ -50,9 +68,11 @@ class Heap{
 
 		arr.pop();
 		this.heapify();
-
 	}
 
+	/**
+	 * heapify the tree strucutre from floor(n/2-1), where n = total number of nodes
+	 */
 	heapify(){
 
 		let i = Math.floor((this.size/2) - 1);
@@ -77,6 +97,13 @@ class Heap{
 
 	}
 
+	/**
+	 * Get the underlying data structure
+	 * @returns {number[]}
+	 */
+	toArray(){
+		return this.data;
+	}
 }
 
 module.exports = Heap;
