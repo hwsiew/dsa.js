@@ -1,8 +1,8 @@
 # Prefix vs Infix vs Postfix Expression
 
-Infix Expression : 1+2
-Prefix Expression : +12
-Postfix Expression : 12+
+- Infix Expression : 1+2
+- Prefix Expression : +12
+- Postfix Expression : 12+
 
 ## Algorithm of Infix to Postfix Conversion
 1. Scan the infix expression from left to right. 
