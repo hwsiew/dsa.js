@@ -43,3 +43,15 @@ The degree of a node is the total number of branches of that node.
 2. Perfect Binary Tree: A perfect binary tree is a type of binary tree in which every internal node has exactly two child nodes and all the leaf nodes are at the same level.
 3. Complete Binary Tree: A complete binary tree is a binary tree in which all the levels are completely filled except possibly the lowest one, which is filled from the left.
 4. Balanced Binary Tree: A balanced binary tree, also referred to as a height-balanced binary tree, is defined as a binary tree in which the height of the left and right subtree of any node differ by not more than 1.
+
+## Binary Search Tree Time Complexity
+Operation |Best Case  | Avearge Case | Worst Case
+----------|-----------|--------------|------------
+Search 	  | Ω(log(n)) | θ(log(n)) 	 |  O(n)  
+Insertion | Ω(log(n)) | θ(log(n)) 	 |  O(n)  
+Deletion  | Ω(log(n)) | θ(log(n)) 	 |  O(n)  
+
+** Worst Case occur when skewed binary tree
+
+## Binary Search Tree Space Complexity
+The space complexity for all the operations is O(n).
