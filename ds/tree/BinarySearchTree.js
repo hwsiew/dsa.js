@@ -36,12 +36,17 @@ class BinarySearchTree extends Tree{
 	insert(num){
 
 		const add = function(root){
-			if(!root) return new BinaryTreeNode(num);
-			if (num < root.value) {
+			if(!root){
+				return new BinaryTreeNode(num);
+			} else if (num < root.value) {
 				root.left = add(root.left);
 			} else {
 				root.right = add(root.right);
 			}
+
+			root.height = 1 + Math.max( 
+								root.left ? root.left.height : 0,
+								root.right ? root.right.height : 0);
 
 			return root;
 		}
