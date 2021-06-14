@@ -1,15 +1,42 @@
 const { Tree, TreeNode } = require('./Tree');
 
-class BinarySearchTree extends Tree{
+/**
+ * Class representing a binary tree node
+ * @extends TreeNode
+ */
+class BinaryTreeNode extends TreeNode {
+	/**
+	 * Create a binary tree node
+	 * @param {number} val 
+	 * @param {BinaryTreeNode} left 
+	 * @param {BinarySearchTree} right 
+	 */
+	constructor(val, left = null, right = null){
+		super(val, left, right);
+		this.height = 0;
+	}
+}
 
+/**
+ * Class representing a binaray tree
+ * @extends Tree
+ */
+class BinarySearchTree extends Tree{
+	/**
+	 * Create an empty tree
+	 */
 	constructor(){
 		super()
 	}
 
+	/**
+	 * Insert a node with value into binary tree
+	 * @param {number} num 
+	 */
 	insert(num){
 
 		const add = function(root){
-			if(!root) return new TreeNode(num);
+			if(!root) return new BinaryTreeNode(num);
 			if (num < root.value) {
 				root.left = add(root.left);
 			} else {
@@ -22,10 +49,15 @@ class BinarySearchTree extends Tree{
 		this.root = add(this.root);
 	}
 
+	/**
+	 * Find a number in the binary search tree
+	 * @param {number} num 
+	 * @returns {?BinaryTreeNode}
+	 */
 	search(num){
 		const find = function(root){
 
-			if(!root) return -1;
+			if(!root) return null;
 		
 			if(root.value == num) return root;
 
@@ -38,6 +70,10 @@ class BinarySearchTree extends Tree{
 		return find(this.root);
 	}
 
+	/**
+	 * Delete a node with value = num
+	 * @param {number} num 
+	 */
 	delete(num){
 
 		let self = this;

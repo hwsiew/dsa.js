@@ -21,7 +21,7 @@ it('should search an existing node in tree', function(){
 });
 
 it('should not found a node in tree', function(){
-	expect(b.search(100)).toBe(-1);
+	expect(b.search(100)).toBeNull();
 });
 
 it('should delete a leave node in tree', function(){
