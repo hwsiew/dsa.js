@@ -9,7 +9,6 @@ function quickSort(arr, low = 0, high = arr.length-1){
 	if(low >= high) return arr;
 
 	let pIndex = partition(arr,low,high);
-	console.log(pIndex, arr);
 	quickSort(arr, low, pIndex-1);
 	quickSort(arr, pIndex+1, high);
 
