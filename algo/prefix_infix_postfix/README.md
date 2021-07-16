@@ -18,7 +18,7 @@
 
 Reference : https://www.geeksforgeeks.org/stack-set-2-infix-to-postfix/
 
-## Algorithm of Infix to Postfix Conversion
+## Algorithm of Infix to Prefix Conversion
 1. Reverse the infix expression i.e A+B*C will become C*B+A. Note while reversing each ‘(‘ will become ‘)’ and each ‘)’ becomes ‘(‘.
 2. Obtain the “nearly” postfix expression of the modified expression. Note that, we have to pop all the operators from the stack which are greater in precedence than that of the scanned operator. Only in the case of “^” operator, we pop operators from the stack which are greater than or equal to in precedence.
 3. Reverse the postfix expression. Hence in our example prefix is +A*BC
