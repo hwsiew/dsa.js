@@ -1,4 +1,6 @@
-export default class Queue {
+import CircularQueue from "./circularQueue";
+
+class Queue {
 
 	_: Array<any>;
 
@@ -59,3 +61,8 @@ export default class Queue {
 		return this._[0];
 	}
 }
+
+export {
+	Queue as default,
+	CircularQueue
+};
