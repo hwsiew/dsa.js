@@ -1,9 +1,12 @@
 import Stack from './ds/stack';
-import Queue from './ds/queue';
+import Queue, { CircularQueue } from './ds/queue';
+import Heap from './ds/heap';
 import LinkedList from './ds/list';
 
 export {
 	Stack,
 	Queue,
-	LinkedList
+	CircularQueue,
+	LinkedList,
+	Heap
 }
