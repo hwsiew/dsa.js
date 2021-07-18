@@ -1,16 +1,22 @@
 {
   "name": "dsajs",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Data structure and algorithms implementation in Javascript",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "homepage": "https://github.com/hwsiew/dsa.js",
   "scripts": {
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.esm.json",
+    "postbuild": "typedoc",
     "test": "jest"
   },
   "keywords": [
-    "data structure", "stack", "queue", "linked list"
+    "data structure",
+    "stack",
+    "queue",
+    "circular queue",
+    "heap",
+    "linked list"
   ],
   "author": {
     "name": "Hong Wei, Siew",
@@ -21,6 +27,7 @@
     "@types/jest": "^26.0.24",
     "jest": "^27.0.6",
     "ts-jest": "^27.0.3",
+    "typedoc": "^0.21.4",
     "typescript": "^4.3.5"
   },
   "files": [
