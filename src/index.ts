@@ -3,6 +3,7 @@ import Queue, { CircularQueue, PriorityQueue } from './ds/queue';
 import Heap from './ds/heap';
 import LinkedList from './ds/list';
 import Graph from './ds/graph';
+import BinaryTree from './ds/tree';
 
 export {
 	Stack,
@@ -11,5 +12,6 @@ export {
 	PriorityQueue,
 	LinkedList,
 	Heap,
-	Graph
+	Graph,
+	BinaryTree
 }
