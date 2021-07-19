@@ -22,12 +22,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Graph = exports.Heap = exports.LinkedList = exports.CircularQueue = exports.Queue = exports.Stack = void 0;
+exports.Graph = exports.Heap = exports.LinkedList = exports.PriorityQueue = exports.CircularQueue = exports.Queue = exports.Stack = void 0;
 var stack_1 = __importDefault(require("./ds/stack"));
 exports.Stack = stack_1.default;
 var queue_1 = __importStar(require("./ds/queue"));
 exports.Queue = queue_1.default;
 Object.defineProperty(exports, "CircularQueue", { enumerable: true, get: function () { return queue_1.CircularQueue; } });
+Object.defineProperty(exports, "PriorityQueue", { enumerable: true, get: function () { return queue_1.PriorityQueue; } });
 var heap_1 = __importDefault(require("./ds/heap"));
 exports.Heap = heap_1.default;
 var list_1 = __importDefault(require("./ds/list"));

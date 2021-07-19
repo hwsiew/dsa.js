@@ -8,9 +8,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CircularQueue = exports.default = void 0;
+exports.PriorityQueue = exports.CircularQueue = exports.default = void 0;
 var circularQueue_1 = __importDefault(require("./circularQueue"));
 exports.CircularQueue = circularQueue_1.default;
+var priorityQueue_1 = __importDefault(require("./priorityQueue"));
+exports.PriorityQueue = priorityQueue_1.default;
 var Queue = /** @class */ (function () {
     function Queue(arr) {
         if (arr === void 0) { arr = []; }

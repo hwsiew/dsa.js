@@ -4,6 +4,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from) {
     return to;
 };
 import CircularQueue from "./circularQueue";
+import PriorityQueue from "./priorityQueue";
 var Queue = /** @class */ (function () {
     function Queue(arr) {
         if (arr === void 0) { arr = []; }
@@ -61,4 +62,4 @@ var Queue = /** @class */ (function () {
     };
     return Queue;
 }());
-export { Queue as default, CircularQueue };
+export { Queue as default, CircularQueue, PriorityQueue };
