@@ -1,4 +1,5 @@
 import CircularQueue from "./circularQueue";
+import PriorityQueue from "./priorityQueue";
 
 class Queue {
 
@@ -64,5 +65,6 @@ class Queue {
 
 export {
 	Queue as default,
-	CircularQueue
+	CircularQueue,
+	PriorityQueue
 };

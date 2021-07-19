@@ -1,4 +1,7 @@
-import Queue, { CircularQueue } from './index';
+import Queue, { 
+	CircularQueue, 
+	PriorityQueue
+} from './index';
 
 describe('Test data structure : Queue', function(){
 
@@ -74,4 +77,37 @@ describe('Test data structure : CircularQueue', function(){
 		expect(q.isEmpty()).toBeFalsy();
 	});
 
+})
+
+describe('Priority Queue Test Cases', function(){
+	it('should enqueue elements to queue', function(){
+		let ds = new PriorityQueue();
+		expect(ds.size).toBe(0);
+		ds.enqueue(1);
+		expect(ds.toArray()).toEqual([1])
+		ds.enqueue(5);
+		expect(ds.toArray()).toEqual([5,1]);
+		ds.enqueue(2);
+		expect(ds.toArray()).toEqual([5,1,2]);
+		ds.enqueue(6);
+		expect(ds.toArray()).toEqual([6,5,2,1]);
+		expect(ds.size).toEqual(4);
+	});
+
+	it('should dequeue elements from queue', function(){
+		let ds = new PriorityQueue();
+		ds.enqueue(1);
+		ds.enqueue(5);
+		ds.enqueue(3);
+		ds.enqueue(6);
+		ds.enqueue(4);
+		expect(ds.toArray()).toEqual([6,5,3,1,4]);
+		expect(ds.dequeue()).toEqual(6);
+		expect(ds.toArray()).toEqual([5,4,3,1]);
+		expect(ds.dequeue()).toEqual(5);
+		expect(ds.dequeue()).toEqual(4);
+		expect(ds.dequeue()).toEqual(3);
+		expect(ds.dequeue()).toEqual(1);
+		expect(ds.toArray()).toEqual([]);
+	});
 })
