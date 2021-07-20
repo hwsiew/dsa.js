@@ -5,6 +5,12 @@
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "homepage": "https://github.com/hwsiew/dsa.js",
+  "exports":{
+    ".": {
+      "require" :  "./dist/cjs/index.js",
+      "import" : "./dist/cjs/index.js"
+    }
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.esm.json",
     "postbuild": "typedoc",
