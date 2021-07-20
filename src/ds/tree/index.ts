@@ -12,6 +12,10 @@ export default class BinaryTree {
 
 	_root: BinaryNode | null;
 
+	/**
+	 * @constructor
+	 * @param {Array<*>} arr 
+	 */
 	constructor (arr: Array<any> = []) {
 
 		if(!arr || !Array.isArray(arr))
@@ -31,6 +35,13 @@ export default class BinaryTree {
 		
 		this._root = build(0);
 	
+	}
+
+	/**
+	 * The root of the tree
+	 */
+	get root(){
+		return this._root;
 	}
 
 	/**
@@ -242,11 +253,53 @@ export default class BinaryTree {
 		return verify(this._root);
 	}
 
-	isSymmetric () {
-		throw new Error('Not implemented');
+	/**
+	 * Check if tree1 is symmetric to tree2
+	 * 
+	 * @param {BinaryTree} tree1 
+	 * @param {BinaryNode} tree2 
+	 * @returns {boolean}
+	 */
+	static isSymmetric (tree1: BinaryTree, tree2: BinaryTree): boolean {
+
+		let verify = function(root1: BinaryNode|null, root2: BinaryNode|null): boolean {
+
+			if(!root1 && !root2) return true;
+
+			if(root1 && root2)
+				if(root1.data === root2.data){
+					return verify(root1.left, root2.right) && verify(root1.right, root2.left); 
+				}
+			
+
+			return false;
+
+		}
+
+		return verify(tree1.root,tree2.root);
 	}
 
-	isSubtree () {
-		throw new Error('Not implemented');
+	/**
+	 * Check if tree2 is a subtree of tree1
+	 * 
+	 * @param {BinaryTree} tree1 
+	 * @param {BinaryTree} tree2 
+	 * @returns {boolean}
+	 */
+	static isSubtree (tree1: BinaryTree, tree2: BinaryTree): boolean  {
+
+		let verify = function(root1: BinaryNode|null, root2: BinaryNode|null): boolean {
+
+			if(!root1 && !root2) return true;
+
+			if(root1 && root2){
+				if(root1.data !== root2.data) return verify(root1.left,root2) || verify(root1.right,root2);
+				else return verify(root1.left,root2.left) && verify(root1.right,root2.right);
+			 }
+	
+			return false;
+		}
+		
+		return verify(tree1.root, tree2.root);
 	}
 }
