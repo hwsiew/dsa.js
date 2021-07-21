@@ -22,7 +22,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BinaryTree = exports.Graph = exports.Heap = exports.LinkedList = exports.PriorityQueue = exports.CircularQueue = exports.Queue = exports.Stack = void 0;
+exports.BinarySearchTree = exports.BinaryTree = exports.Graph = exports.Heap = exports.LinkedList = exports.PriorityQueue = exports.CircularQueue = exports.Queue = exports.Stack = void 0;
 var stack_1 = __importDefault(require("./ds/stack"));
 exports.Stack = stack_1.default;
 var queue_1 = __importStar(require("./ds/queue"));
@@ -35,5 +35,6 @@ var list_1 = __importDefault(require("./ds/list"));
 exports.LinkedList = list_1.default;
 var graph_1 = __importDefault(require("./ds/graph"));
 exports.Graph = graph_1.default;
-var tree_1 = __importDefault(require("./ds/tree"));
-exports.BinaryTree = tree_1.default;
+var tree_1 = require("./ds/tree");
+Object.defineProperty(exports, "BinaryTree", { enumerable: true, get: function () { return tree_1.BinaryTree; } });
+Object.defineProperty(exports, "BinarySearchTree", { enumerable: true, get: function () { return tree_1.BinarySearchTree; } });

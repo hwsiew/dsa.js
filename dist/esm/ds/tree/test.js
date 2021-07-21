@@ -1,4 +1,51 @@
-import BinaryTree from ".";
+import BinaryTree from "./BinaryTree";
+import BinaryNode from "./binaryNode";
+import BinarySearchTree from "./BinarySearchTree";
+describe('Binary Search Tree Test Cases', function () {
+    it('should add node to search tree', function () {
+        var ds = new BinarySearchTree();
+        ds.insert(5);
+        ds.insert(4);
+        ds.insert(6);
+        expect(ds.size()).toBe(3);
+    });
+    it('should search a node in tree', function () {
+        var ds = new BinarySearchTree();
+        ds.insert(8);
+        ds.insert(3);
+        ds.insert(10);
+        ds.insert(1);
+        ds.insert(6);
+        ds.insert(7);
+        ds.insert(14);
+        expect(ds.size()).toBe(7);
+        expect(ds.search(14)).toEqual(new BinaryNode(14));
+    });
+    it('should delete a node in tree', function () {
+        var ds = new BinarySearchTree();
+        ds.insert(8);
+        ds.insert(3);
+        ds.insert(10);
+        ds.insert(1);
+        ds.insert(6);
+        ds.insert(7);
+        ds.insert(9);
+        expect(ds.size()).toBe(7);
+        ds.delete(3); // has both left and right node
+        expect(ds.size()).toBe(6);
+        ds.delete(6); // has only right node
+        expect(ds.size()).toBe(5);
+        ds.delete(20); // element not in tree
+        expect(ds.size()).toBe(5);
+        ds.delete(10); // has only left node
+        expect(ds.size()).toBe(4);
+        ds.delete(9); // has no children nodes
+        expect(ds.size()).toBe(3);
+        ds.insert(14);
+        ds.delete(8); // root node
+        expect(ds.size()).toBe(3);
+    });
+});
 describe('Binary Tree Tests Cases', function () {
     it('should check if tree is empty', function () {
         var ds = new BinaryTree([]);
