@@ -10,7 +10,27 @@ import {
 	BinarySearchTree
 } from '.'
 
-describe('Import test cases', function(){
+import {
+	bubbleSort,
+	selectionSort,
+	insertionSort,
+	quickSort,
+	mergeSort,
+	heapSort
+} from './algo/sort';
+
+describe('Test cases for sorting algorithms', function(){
+	it('should be imported', function(){
+		expect(bubbleSort).toBeDefined();
+		expect(selectionSort).toBeDefined();
+		expect(insertionSort).toBeDefined();
+		expect(quickSort).toBeDefined();
+		expect(mergeSort).toBeDefined();
+		expect(heapSort).toBeDefined();
+	})
+});
+
+describe('Test cases for data structure', function(){
 	it('should instantiate Stack', function(){
 		expect(new Stack()).toBeInstanceOf(Stack);
 	});
