@@ -1,0 +1,1 @@
+export type BinarySearchCompareFunction = (a: any) => number;

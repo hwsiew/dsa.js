@@ -19,6 +19,16 @@ import {
 	heapSort
 } from './algo/sort';
 
+import {
+	binarySearch
+} from './algo/search';
+
+describe('Test cases for search algorithms', function(){
+	it('should be imported', function(){
+		expect(binarySearch).toBeDefined();
+	});
+});
+
 describe('Test cases for sorting algorithms', function(){
 	it('should be imported', function(){
 		expect(bubbleSort).toBeDefined();
