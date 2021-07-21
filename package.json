@@ -1,6 +1,6 @@
 {
   "name": "dsajs",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Data structure and algorithms implementation in Javascript",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -25,7 +25,9 @@
     "heap",
     "linked list",
     "graph",
-    "tree"
+    "tree",
+    "binary tree",
+    "binary search tree"
   ],
   "author": {
     "name": "Hong Wei, Siew",
