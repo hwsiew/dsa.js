@@ -9,6 +9,10 @@
     ".": {
       "require" :  "./dist/cjs/index.js",
       "import" : "./dist/cjs/index.js"
+    },
+    "./algo/*": {
+      "require": "./dist/cjs/algo/*/index.js",
+      "import" : "./dist/cjs/algo/*/index.js"
     }
   },
   "scripts": {
