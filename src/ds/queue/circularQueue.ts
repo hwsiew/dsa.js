@@ -1,10 +1,28 @@
+/**
+ * ## Circular Queue
+ * 
+ * A circular shape of queue which follows first in first out.
+ * 
+ * ### Examples
+ * ```javascript
+ * const { CircularQueue } = require('dsajs');
+ * // or 
+ * // import { CircularQueue } from 'dsajs';
+ * 
+ * let ds = new CircularQueue();
+ * ``` 
+ */
 export default class CircularQueue {
 
-	_: Array<any>;
-	_first: number;
-	_last: number;
-	_size: number;
+	private _: Array<any>;
+	private _first: number;
+	private _last: number;
+	private _size: number;
 	
+	/**
+	 * @constructor
+	 * @param size the number elements allows for circular queue
+	 */
 	constructor(size: number){
 		this._ = new Array(size);
 		this._first = -1;
@@ -12,18 +30,36 @@ export default class CircularQueue {
 		this._size  = size;
 	}
 
+	/**
+	 * The size of circular queue 
+	 */
 	get size() {
 		return this._size;
 	}
 
-	isEmpty(){
+	/**
+	 * Check if queue is empty
+	 * 
+	 * @returns {boolean}
+	 */
+	isEmpty(): boolean{
 		return this._first == -1 && this._last == -1;
 	}
 
-	isFull(){
+	/**
+	 * Check if queue is full
+	 * 
+	 * @returns {boolean}
+	 */
+	isFull(): boolean{
 		return (this._last + 1) % this._size == this._first;
 	}
 
+	/**
+	 * Enqueue an element to queue
+	 * 
+	 * @param {*} element 
+	 */
 	enqueue(element: any){
 		if(this.isEmpty()){
 			this._[0] = element;
@@ -37,6 +73,11 @@ export default class CircularQueue {
 		}
 	}
 
+	/**
+	 * Remove the first element from queue if one exists 
+	 * 
+	 * @returns {*} an element of queue or undefined if queue is empty
+	 */
 	dequeue(){
 		if(this.isEmpty()) return undefined;
 		
@@ -52,6 +93,11 @@ export default class CircularQueue {
 		return this._[first];
 	}
 
+	/**
+	 * Peek the first element of queue without removing it from queue
+	 * 
+	 * @returns {*} an element of queue or undefined if queue is empty
+	 */
 	peek(){
 		if(this.isEmpty()) return undefined;
 
