@@ -1,6 +1,29 @@
+/**
+ * # Stack
+ * 
+ * Last in first out (LIFO) linear data structure
+ * 
+ * ## Example
+ * ```javascript
+ * const { Stack }  = require('dsajs');
+ * // or
+ * // import { Stack } from 'dsajs';
+ * 
+ * let s = new Stack();
+ * ```
+ */
 export default class Stack {
-	_: Array<any>;
+	/**
+	 * to hold stack's data
+	 * @private 
+	 */
+	private _: Array<any>;
 
+	/**
+	 * @constructor
+	 * @param {?Array[*]} arr optional array to initialize stack
+	 * @throws Will throw an error if the argument is provided and is not an arry 
+	 */
 	constructor(arr: Array<any> = []){
 		
 		if(!Array.isArray(arr))
