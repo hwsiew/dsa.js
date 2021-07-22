@@ -1,4 +1,8 @@
 {
-	"entryPoints": ["src/index.ts","src/algo/sort/index.ts"],
+	"entryPoints": [
+		"src/index.ts",
+		"src/algo/sort/index.ts",
+		"src/algo/search/index.ts"
+	],
 	"out": "docs"
 }
