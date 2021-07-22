@@ -1,5 +1,17 @@
 import { LinkedList } from "../..";
 
+/**
+ * ## Graph
+ * 
+ * ## Examples
+ * ```javascript
+ * const { Graph } = require('dsajs');
+ * // or  
+ * import { Graph } from 'dsajs';
+ * 
+ * let ds = new Graph();
+ * ```
+ */
 export default class Graph{
 	_:Map<any,any>;
 
