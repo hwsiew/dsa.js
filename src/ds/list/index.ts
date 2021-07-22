@@ -2,6 +2,18 @@ import ListNode from "./ListNode";
 
 type CompareFunction = (a: any) => boolean;
 
+/**
+ * ## Singly Linked List
+ * 
+ * ### Examples
+ * ```javascript
+ * const { LinkedList } = require('dsajs');
+ * // or  
+ * // import { LinkedList } from 'dsajs';
+ * 
+ * let ds = new LinkedList();
+ * ```
+ */
 class LinkedList {
 
 	_head: ListNode | null;
