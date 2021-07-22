@@ -68,6 +68,25 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#queue" id="queue" style="color: inherit; text-decoration: none;">
+							<h2>Queue</h2>
+						</a>
+					</div>
+					<p>First in first out (FIFO) linear data structure</p>
+					<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
+						<h3>Examples</h3>
+					</a>
+					<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">Queue</span><span style="color: #000000"> } = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;dsajs&#039;</span><span style="color: #000000">);</span>
+<span style="color: #008000">// or</span>
+<span style="color: #008000">// import { Queue } from &#039;dsajs&#039;;</span>
+
+<span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">q</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Queue</span><span style="color: #000000">();</span>
+</code></pre>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -86,10 +105,10 @@
 								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="index.Queue.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="index.Queue.html#_" class="tsd-kind-icon">_</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="index.Queue.html#_" class="tsd-kind-icon">_</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -122,13 +141,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/5680c17/src/ds/queue/index.ts#L8">ds/queue/index.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/495a634/src/ds/queue/index.ts#L27">ds/queue/index.ts:27</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>Will throw an error if the argument is provided and is not an arry</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>arr: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>optional array to initialize queue</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="index.Queue.html" class="tsd-signature-type" data-tsd-kind="Class">Queue</a></h4>
@@ -136,15 +167,15 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="_" class="tsd-anchor"></a>
-					<h3>_</h3>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _</h3>
 					<div class="tsd-signature tsd-kind-icon">_<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/5680c17/src/ds/queue/index.ts#L6">ds/queue/index.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/495a634/src/ds/queue/index.ts#L20">ds/queue/index.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -161,7 +192,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/5680c17/src/ds/queue/index.ts#L21">ds/queue/index.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/495a634/src/ds/queue/index.ts#L40">ds/queue/index.ts:40</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -186,7 +217,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/5680c17/src/ds/queue/index.ts#L48">ds/queue/index.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/495a634/src/ds/queue/index.ts#L67">ds/queue/index.ts:67</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -209,7 +240,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/5680c17/src/ds/queue/index.ts#L39">ds/queue/index.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/495a634/src/ds/queue/index.ts#L58">ds/queue/index.ts:58</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -239,7 +270,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/5680c17/src/ds/queue/index.ts#L30">ds/queue/index.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/495a634/src/ds/queue/index.ts#L49">ds/queue/index.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -261,7 +292,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/5680c17/src/ds/queue/index.ts#L59">ds/queue/index.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/495a634/src/ds/queue/index.ts#L78">ds/queue/index.ts:78</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -281,6 +312,9 @@
 				<ul>
 					<li class=" ">
 						<a href="../modules.html">Modules</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/algo_search.html">algo/search</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/algo_sort.html">algo/sort</a>
@@ -321,7 +355,7 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="index.Queue.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="index.Queue.html#_" class="tsd-kind-icon">_</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
@@ -358,11 +392,13 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
 			</ul>
 		</div>
 	</div>

@@ -5,7 +5,26 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from) {
 };
 import CircularQueue from "./circularQueue";
 import PriorityQueue from "./priorityQueue";
+/**
+ * ## Queue
+ *
+ * First in first out (FIFO) linear data structure
+ *
+ * ### Examples
+ * ```javascript
+ * const { Queue } = require('dsajs');
+ * // or
+ * // import { Queue } from 'dsajs';
+ *
+ * let q = new Queue();
+ * ```
+ */
 var Queue = /** @class */ (function () {
+    /**
+     * @constructor
+     * @param arr optional array to initialize queue
+     * @throws Will throw an error if the argument is provided and is not an arry
+     */
     function Queue(arr) {
         if (arr === void 0) { arr = []; }
         if (!Array.isArray(arr))

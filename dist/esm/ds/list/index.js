@@ -1,4 +1,16 @@
 import ListNode from "./ListNode";
+/**
+ * ## Singly Linked List
+ *
+ * ### Examples
+ * ```javascript
+ * const { LinkedList } = require('dsajs');
+ * // or
+ * // import { LinkedList } from 'dsajs';
+ *
+ * let ds = new LinkedList();
+ * ```
+ */
 var LinkedList = /** @class */ (function () {
     function LinkedList(head) {
         if (head === void 0) { head = null; }

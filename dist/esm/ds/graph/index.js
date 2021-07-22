@@ -1,4 +1,16 @@
 import { LinkedList } from "../..";
+/**
+ * ## Graph
+ *
+ * ## Examples
+ * ```javascript
+ * const { Graph } = require('dsajs');
+ * // or
+ * import { Graph } from 'dsajs';
+ *
+ * let ds = new Graph();
+ * ```
+ */
 var Graph = /** @class */ (function () {
     function Graph() {
         this._ = new Map();

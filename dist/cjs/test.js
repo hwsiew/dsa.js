@@ -2,6 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var _1 = require(".");
 var sort_1 = require("./algo/sort");
+var search_1 = require("./algo/search");
+describe('Test cases for search algorithms', function () {
+    it('should be imported', function () {
+        expect(search_1.binarySearch).toBeDefined();
+    });
+});
 describe('Test cases for sorting algorithms', function () {
     it('should be imported', function () {
         expect(sort_1.bubbleSort).toBeDefined();

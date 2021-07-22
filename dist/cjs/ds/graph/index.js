@@ -1,6 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var __1 = require("../..");
+/**
+ * ## Graph
+ *
+ * ## Examples
+ * ```javascript
+ * const { Graph } = require('dsajs');
+ * // or
+ * import { Graph } from 'dsajs';
+ *
+ * let ds = new Graph();
+ * ```
+ */
 var Graph = /** @class */ (function () {
     function Graph() {
         this._ = new Map();

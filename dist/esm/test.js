@@ -1,5 +1,11 @@
 import { Stack, Queue, CircularQueue, PriorityQueue, LinkedList, Heap, Graph, BinaryTree, BinarySearchTree } from '.';
 import { bubbleSort, selectionSort, insertionSort, quickSort, mergeSort, heapSort } from './algo/sort';
+import { binarySearch } from './algo/search';
+describe('Test cases for search algorithms', function () {
+    it('should be imported', function () {
+        expect(binarySearch).toBeDefined();
+    });
+});
 describe('Test cases for sorting algorithms', function () {
     it('should be imported', function () {
         expect(bubbleSort).toBeDefined();

@@ -1,9 +1,30 @@
+/**
+ * ## Heap
+ *
+ * A Heap is a special Tree-based data structure in which the tree is a complete binary tree
+ *
+ * ### Examples
+ * ```javascript
+ * const { Heap } = require('dsajs');
+ * // or
+ * // import { Heap } from 'dsajs';
+ * let maxHeap = new Heap((a,b) => b>a);
+ * let minHeap = new Heap((a,b) => a>b);
+ * ```
+ */
 var Heap = /** @class */ (function () {
+    /**
+     * @constructor
+     * @param compareFn (a,b) => return true if b should be before a else false
+     */
     function Heap(compareFn) {
         this._ = [];
         this.compareFn = compareFn;
     }
     Object.defineProperty(Heap.prototype, "size", {
+        /**
+         * The size of heap
+         */
         get: function () {
             return this._.length;
         },
@@ -11,6 +32,9 @@ var Heap = /** @class */ (function () {
         configurable: true
     });
     Object.defineProperty(Heap.prototype, "top", {
+        /**
+         * The top element of heap
+         */
         get: function () {
             if (this.isEmpty())
                 return undefined;
@@ -20,13 +44,24 @@ var Heap = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    /**
+     * Check if heap is empty
+     * @returns {boolean}
+     */
     Heap.prototype.isEmpty = function () {
         return this.size === 0;
     };
+    /**
+     * Add an element to heap
+     * @param data
+     */
     Heap.prototype.add = function (data) {
         this._.push(data);
         this.heapify();
     };
+    /**
+     * Clear all element from heap
+     */
     Heap.prototype.clear = function () {
         this._ = [];
     };
@@ -46,6 +81,10 @@ var Heap = /** @class */ (function () {
             return top_1;
         }
     };
+    /**
+     * The process of building a heap tree
+     * @returns
+     */
     Heap.prototype.heapify = function () {
         var _a;
         if (this.isEmpty())

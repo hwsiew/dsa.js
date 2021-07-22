@@ -6,6 +6,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ListNode = exports.default = void 0;
 var ListNode_1 = __importDefault(require("./ListNode"));
 exports.ListNode = ListNode_1.default;
+/**
+ * ## Singly Linked List
+ *
+ * ### Examples
+ * ```javascript
+ * const { LinkedList } = require('dsajs');
+ * // or
+ * // import { LinkedList } from 'dsajs';
+ *
+ * let ds = new LinkedList();
+ * ```
+ */
 var LinkedList = /** @class */ (function () {
     function LinkedList(head) {
         if (head === void 0) { head = null; }

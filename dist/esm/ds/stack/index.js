@@ -3,7 +3,26 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from) {
         to[j] = from[i];
     return to;
 };
+/**
+ * # Stack
+ *
+ * Last in first out (LIFO) linear data structure
+ *
+ * ## Example
+ * ```javascript
+ * const { Stack }  = require('dsajs');
+ * // or
+ * // import { Stack } from 'dsajs';
+ *
+ * let s = new Stack();
+ * ```
+ */
 var Stack = /** @class */ (function () {
+    /**
+     * @constructor
+     * @param {?Array[*]} arr optional array to initialize stack
+     * @throws Will throw an error if the argument is provided and is not an arry
+     */
     function Stack(arr) {
         if (arr === void 0) { arr = []; }
         if (!Array.isArray(arr))
