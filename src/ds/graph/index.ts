@@ -13,24 +13,44 @@ import { LinkedList } from "../..";
  * ```
  */
 export default class Graph{
-	_:Map<any,any>;
-
+	private _:Map<any,any>;
+	/**
+	 * @constructor
+	 */
 	constructor(){
 		this._ = new Map();
 	}
 
-	addVertex(v: any){
+	/**
+	 * Add a vertex to the graph
+	 * 
+	 * @param v vertex
+	 * @returns 
+	 */
+	addVertex(v: any) {
 		if(this._.has(v)) return; // do nothing is vertex exist
 
 		let list = new LinkedList();
 		this._.set(v, list);
 	}
-
+	
+	/**
+	 * Get a vertex if available 
+	 * 
+	 * @param vertex 
+	 * @returns undefined if not vertex found
+	 */
 	getVertex(vertex: any): LinkedList | undefined{
 		if(!this._.has(vertex)) return undefined;
 		return this._.get(vertex);
 	}
 
+	/**
+	 * Delete a vertex if available
+	 * 
+	 * @param {*} v 
+	 * @returns {boolean} if vertex is deleted successfully
+	 */
 	deleteVertex(v: any): boolean{
 		if(!this._.has(v)) return false; 
 
@@ -43,6 +63,12 @@ export default class Graph{
 		return true;
 	}
 
+	/**
+	 * Add an edge between from and to
+	 * 
+	 * @param {*} from need to match the type of vertex added
+	 * @param {*} to need to match the type of vertex added
+	 */
 	addEdge(from: any, to: any){
 		if(!this._.has(from) || !this._.has(to)) 
 			throw new Error('Vertex is not found');
@@ -51,6 +77,12 @@ export default class Graph{
 		list.append(to);
 	}
 
+	/**
+	 * Remove an edge between from and to
+	 * 
+	 * @param {*} from need to match the type of vertex added
+	 * @param {*} to need to match the type of vertex added
+	 */
 	removeEdge(from: any, to: any){
 		if(!this._.has(from) || !this._.has(to)) 
 			throw new Error('Vertex is not found');
@@ -59,6 +91,13 @@ export default class Graph{
 		list.delete((x:any) => x === to);
 	}
 	
+	/**
+	 * Check if there exists a path between from and to
+	 * 
+	 * @param {*} from 
+	 * @param {*} to 
+	 * @returns {boolean}
+	 */
 	hasPath(from: any, to: any): boolean{
 		if(!this._.has(from) || !this._.has(to))
 			return false;
