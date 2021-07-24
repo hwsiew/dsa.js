@@ -1,11 +1,5 @@
 import Heap from "../heap";
-
-/**
- * @param {*} a currently highest priority element
- * @param {*} b next element to compare
- * @returns {boolean};
- */
-type CompareFunction = (a: any, b:any) => boolean;
+import { CompareFunctionBoolean  } from "../../utils/types";
 
 /**
  * Priority Queue 
@@ -24,13 +18,13 @@ type CompareFunction = (a: any, b:any) => boolean;
  */
 export default class PriorityQueue {
 
-	_:Heap;
+	private _: Heap;
 
 	/**
 	 * @constructor
-	 * @param {CompareFunction} compareFunc 
+	 * @param {CompareFunctionBoolean} compareFunc 
 	 */
-	constructor(compareFunc?: CompareFunction){
+	constructor(compareFunc?: CompareFunctionBoolean){
 		if(!compareFunc) compareFunc = (a,b) => b>a;
 		this._ = new Heap(compareFunc);
 	}
