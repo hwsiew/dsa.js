@@ -2,7 +2,8 @@
 	"entryPoints": [
 		"src/index.ts",
 		"src/algo/sort/index.ts",
-		"src/algo/search/index.ts"
+		"src/algo/search/index.ts",
+		"src/utils"
 	],
 	"out": "docs"
 }

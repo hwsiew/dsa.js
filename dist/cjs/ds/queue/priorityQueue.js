@@ -22,7 +22,7 @@ var heap_1 = __importDefault(require("../heap"));
 var PriorityQueue = /** @class */ (function () {
     /**
      * @constructor
-     * @param {CompareFunction} compareFunc
+     * @param {CompareFunctionBoolean} compareFunc
      */
     function PriorityQueue(compareFunc) {
         if (!compareFunc)

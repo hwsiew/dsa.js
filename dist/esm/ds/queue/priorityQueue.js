@@ -17,7 +17,7 @@ import Heap from "../heap";
 var PriorityQueue = /** @class */ (function () {
     /**
      * @constructor
-     * @param {CompareFunction} compareFunc
+     * @param {CompareFunctionBoolean} compareFunc
      */
     function PriorityQueue(compareFunc) {
         if (!compareFunc)
