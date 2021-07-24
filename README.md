@@ -15,7 +15,7 @@ This are implementations of various data structures and algorigthms in javascrip
 
 ## Algorithms
 * Search
-	* [binarySearch]
+	* [binarySearch](https://hwsiew.github.io/dsa.js/modules/algo_search.html)
 * Sorting
 	* [bubbleSort](https://hwsiew.github.io/dsa.js/modules/algo_sort.html#bubbleSort)
 	* [insertionSort](https://hwsiew.github.io/dsa.js/modules/algo_sort.html#insertionSort)
