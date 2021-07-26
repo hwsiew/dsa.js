@@ -74,6 +74,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="utils_types.html#BinarySearchCompareFunction" class="tsd-kind-icon">Binary<wbr>Search<wbr>Compare<wbr>Function</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="utils_types.html#CompareFunctionBoolean" class="tsd-kind-icon">Compare<wbr>Function<wbr>Boolean</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="utils_types.html#CompareFunctionNumber" class="tsd-kind-icon">Compare<wbr>Function<wbr>Number</a></li>
 							</ul>
 						</section>
 					</div>
@@ -87,7 +88,7 @@
 					<div class="tsd-signature tsd-kind-icon">Binary<wbr>Search<wbr>Compare<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/aeefb0b/src/utils/types.ts#L8">utils/types.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/5bcfa78/src/utils/types.ts#L8">utils/types.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -112,9 +113,9 @@
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 										<ul>
-											<li>0, when &#39;a&#39; is the target</li>
-											<li>-1 or &lt;0, when &#39;a&#39; is smaller than &#39;a&#39;</li>
-											<li>1 or &gt;0, when &#39;a&#39; is larger than &#39;a&#39;</li>
+											<li>return 0, when &#39;a&#39; is the target</li>
+											<li>return -1 or &lt;0, when &#39;a&#39; is smaller than &#39;a&#39;</li>
+											<li>return 1 or &gt;0, when &#39;a&#39; is larger than &#39;a&#39;</li>
 										</ul>
 									</li>
 								</ul>
@@ -128,7 +129,7 @@
 					<div class="tsd-signature tsd-kind-icon">Compare<wbr>Function<wbr>Boolean<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/aeefb0b/src/utils/types.ts#L15">utils/types.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/5bcfa78/src/utils/types.ts#L15">utils/types.ts:15</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -167,6 +168,55 @@
 						</ul>
 					</div>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="CompareFunctionNumber" class="tsd-anchor"></a>
+					<h3>Compare<wbr>Function<wbr>Number</h3>
+					<div class="tsd-signature tsd-kind-icon">Compare<wbr>Function<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/hwsiew/dsa.js/blob/5bcfa78/src/utils/types.ts#L25">utils/types.ts:25</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>a: <span class="tsd-signature-type">any</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>current element</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h5>b: <span class="tsd-signature-type">any</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>next element to compare</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+										<ul>
+											<li>return 0, when a == b</li>
+											<li>return &lt;0, when b should be before a</li>
+											<li>return &gt;0, when a should be before b</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -196,6 +246,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="utils_types.html#CompareFunctionBoolean" class="tsd-kind-icon">Compare<wbr>Function<wbr>Boolean</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="utils_types.html#CompareFunctionNumber" class="tsd-kind-icon">Compare<wbr>Function<wbr>Number</a>
 					</li>
 				</ul>
 			</nav>

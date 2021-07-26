@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Sorting an arry using merge sort.
  *
  * @param {Array<*>} arr
- * @param {?CompareFunction} compareFn
+ * @param {?CompareFunctionNumber} compareFn
  */
 function mergeSort(arr, compareFn) {
     if (!compareFn)

@@ -2,7 +2,7 @@
  * Sorting an arry in place using quick sort.
  *
  * @param {Array<*>} arr
- * @param {?CompareFunction} compareFn
+ * @param {?CompareFunctionNumber} compareFn
  */
 export default function heapSort(arr, compareFn) {
     if (!compareFn)

@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Sorting an array inplace using insertion sort
  *
  * @param {Array<*>} arr
- * @param {?CompareFunction} compareFn
+ * @param {?CompareFunctionNumber} compareFn
  */
 var insertionSort = function (arr, compareFn) {
     var n = arr.length;

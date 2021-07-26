@@ -2,7 +2,7 @@
  * Sort arry in place using selection sort
  *
  * @param {Array<*>} arr
- * @param {CompareFunction} compareFn
+ * @param {CompareFunctionNumber} compareFn
  */
 var selectionSort = function (arr, compareFn) {
     var _a;

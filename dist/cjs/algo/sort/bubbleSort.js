@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Sorting an arry inplace using bubble sort.
  *
  * @param {Array<*>} arr
- * @param {?CompareFunction} compareFn
+ * @param {?CompareFunctionNumber} compareFn
  */
 var bubbleSort = function (arr, compareFn) {
     var _a;

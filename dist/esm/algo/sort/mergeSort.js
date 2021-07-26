@@ -2,7 +2,7 @@
  * Sorting an arry using merge sort.
  *
  * @param {Array<*>} arr
- * @param {?CompareFunction} compareFn
+ * @param {?CompareFunctionNumber} compareFn
  */
 export default function mergeSort(arr, compareFn) {
     if (!compareFn)
