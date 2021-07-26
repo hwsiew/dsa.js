@@ -1,12 +1,12 @@
-import { CompareFunction } from "./types";
+import { CompareFunctionNumber } from '../../utils/types';
 
 /**
  * Sorting an arry using merge sort.
  * 
  * @param {Array<*>} arr 
- * @param {?CompareFunction} compareFn 
+ * @param {?CompareFunctionNumber} compareFn 
  */
-export default function mergeSort(arr: Array<any>, compareFn?: CompareFunction): Array<any>{
+export default function mergeSort(arr: Array<any>, compareFn?: CompareFunctionNumber): Array<any>{
 
 	if(!compareFn) compareFn = (a,b) => a-b;
 

@@ -1,12 +1,12 @@
-import { CompareFunction } from "./types";
+import { CompareFunctionNumber } from '../../utils/types';
 
 /**
  * Sort arry in place using selection sort
  * 
  * @param {Array<*>} arr 
- * @param {CompareFunction} compareFn
+ * @param {CompareFunctionNumber} compareFn
  */
-const selectionSort = function(arr: Array<any>, compareFn?: CompareFunction) {
+const selectionSort = function(arr: Array<any>, compareFn?: CompareFunctionNumber) {
 	
 	if(!compareFn) compareFn = (a,b) => a-b;
 	

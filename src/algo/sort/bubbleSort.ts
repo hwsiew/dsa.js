@@ -1,12 +1,12 @@
-import { CompareFunction } from "./types";
+import { CompareFunctionNumber } from '../../utils/types';
 
 /**
  * Sorting an arry inplace using bubble sort.
  * 
  * @param {Array<*>} arr 
- * @param {?CompareFunction} compareFn 
+ * @param {?CompareFunctionNumber} compareFn 
  */
-const bubbleSort = function(arr: Array<any>, compareFn?: CompareFunction): void{
+const bubbleSort = function(arr: Array<any>, compareFn?: CompareFunctionNumber): void{
 	let n = arr.length;
 	if(!compareFn){
 		compareFn = (a,b) => a-b;

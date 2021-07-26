@@ -1,16 +1,16 @@
-import { CompareFunction } from "./types";
+import { CompareFunctionNumber } from '../../utils/types';
 
 /**
  * Sorting an arry in place using quick sort.
  * 
  * @param {Array<*>} arr 
- * @param {?CompareFunction} compareFn 
+ * @param {?CompareFunctionNumber} compareFn 
  */
-export default function heapSort(arr: Array<any>, compareFn?: CompareFunction){
+export default function heapSort(arr: Array<any>, compareFn?: CompareFunctionNumber){
 
 	if(!compareFn) compareFn = (a,b) => a-b;
 
-	let heapify = function(start: number, compare: CompareFunction){
+	let heapify = function(start: number, compare: CompareFunctionNumber){
 		let len = arr.length - start;
 		let n = start + Math.floor(len/2 - 1);
 		while(n >= start){

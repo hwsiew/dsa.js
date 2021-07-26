@@ -1,16 +1,16 @@
-import { CompareFunction } from "./types";
+import { CompareFunctionNumber } from '../../utils/types';
 
 /**
  * Sorting an arry in place using quick sort.
  * 
  * @param {Array<*>} arr 
- * @param {?CompareFunction} compareFn 
+ * @param {?CompareFunctionNumber} compareFn 
  */
-export default function quickSort(arr: Array<any>, compareFn?: CompareFunction){
+export default function quickSort(arr: Array<any>, compareFn?: CompareFunctionNumber){
 
 	if(!compareFn) compareFn = (a,b) => a-b;
 
-	let sort = function(low: number, high: number, compare: CompareFunction){
+	let sort = function(low: number, high: number, compare: CompareFunctionNumber){
 
 		if(low >= high) return arr;
 

@@ -1,12 +1,12 @@
-import { CompareFunction } from "./types";
+import { CompareFunctionNumber } from '../../utils/types';
 
 /**
  * Sorting an array inplace using insertion sort
  * 
  * @param {Array<*>} arr 
- * @param {?CompareFunction} compareFn
+ * @param {?CompareFunctionNumber} compareFn
  */
-const insertionSort = function(arr: Array<any>, compareFn?: CompareFunction){
+const insertionSort = function(arr: Array<any>, compareFn?: CompareFunctionNumber){
 	let n = arr.length;
 	if(!compareFn) compareFn = (a,b) => a-b;
 
