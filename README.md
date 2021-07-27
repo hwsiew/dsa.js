@@ -12,6 +12,7 @@ This are implementations of various data structures and algorigthms in javascrip
 * [Binary Search Tree](https://hwsiew.github.io/dsa.js/classes/index.BinarySearchTree.html)
 * [Singly Linked List](https://hwsiew.github.io/dsa.js/classes/index.LinkedList.html)
 * [Graph](https://hwsiew.github.io/dsa.js/classes/index.Graph.html)
+* [MapMap](https://hwsiew.github.io/dsa.js/classes/index.MapMap.html)
 
 ## Algorithms
 * Search
