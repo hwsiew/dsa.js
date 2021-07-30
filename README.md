@@ -1,5 +1,7 @@
 # Data Strucuture & Algorithms JS
 
+![npm (scoped)](https://img.shields.io/npm/v/@hwsiew/dsajs)
+
 This are implementations of various data structures and algorigthms in javascript. 
 
 ## Data Structures:
