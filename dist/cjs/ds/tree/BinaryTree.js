@@ -130,13 +130,11 @@ var BinaryTree = /** @class */ (function () {
         var verify = function (node) {
             if (!node)
                 return true;
-            // if a node has both left and right node
-            if (node.left && node.right)
+            if (!node.left && !node.right)
                 return true;
-            // if a node has either left or right node
-            if (node.left || node.right)
-                return false;
-            return verify(node.left) && verify(node.right);
+            if (node.left && node.right)
+                return verify(node.left) && verify(node.right);
+            return false;
         };
         return verify(this._root);
     };
