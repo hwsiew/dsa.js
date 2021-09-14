@@ -19,7 +19,7 @@ export default function quickSort(arr: Array<any>, compareFn?: CompareFunctionNu
 			right = high-1;
 
 		while(true){
-			while(compare(arr[left],pivot) < 0) { left++; }
+			while(left < arr.length && compare(arr[left],pivot) < 0) { left++; }
 			while(right > 0 && compare(arr[right],pivot) > 0){ right--; }
 
 			if(left >= right) break;
